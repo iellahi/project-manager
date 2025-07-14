@@ -1,0 +1,35 @@
+Home
+
+
+Projects
+
+
+Editor
+1 Create project data form
+2 Enter form data into sql table
+
+
+
+<form action="/editor" method="post">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control"  required="required" name="title" placeholder="Enter title">
+  </div>
+  <div class="form-group">
+    <label>Summary</label>
+    <input type="text" class="form-control"  required="required" name="summary" placeholder="Enter a summary of project">
+  </div>
+   <div class="form-group">
+    <label>TODO List</label>
+    <input type="text" class="form-control"  required="required" name="todo_list" placeholder="Enter a list of things to do">
+  </div>
+  <div class="form-group">
+    <label>Allow editing permissions to up to 2 users</label>
+    <input type="text" class="form-control" name="permission_1" placeholder="Enter username (optional)">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="permission_2" placeholder="Enter username (optional)">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-primary">Reset</button>
+</form>
