@@ -1,0 +1,54 @@
+body {
+    background-color:antiquewhite;
+    padding: 8px;
+}
+
+
+h1 {
+    background-color: white;
+    padding: 10px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.summary {
+    height:50px;
+    width:650px;
+    font-size:12pt;
+}
+
+.todo {
+    height:200px;
+    width:650px;
+    font-size:14pt;
+}
+
+.permissions {
+    height:30px;
+    width:200;
+}
+
+.title {
+    height:50px;
+    width:650px;
+    font-size:20pt;
+}
+
+.history {
+    width:330px;
+    height:250px;
+    border: 2px solid white;
+}
+
+.editor {
+    width: 550px;
+    height:400px;
+    padding-top: 50px;
+    border: 2px solid white;
+}
