@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Projects
+{% endblock %}
+
+{% block main %}
+        <form action="/" method="post">
+
+            <button type="submit" class="btn btn-light" name="add" value="add">Create a Project</button>
+
+            <br><br>
+
+            <button type="submit" class="btn btn-light" name="edit" value="edit">View Project</button>
+            <select name="title" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              {% for project in projects %}
+                  <option> {{ project["title"] }} </option>
+                {% endfor %}
+            </select>
+        </form>
+
+    <br><br>
+
+    {% for project in projects %}
+        <table class="table table-striped" class="table table-hover" align="center" border="1px solid black">
+            <th colspan="2" style="text-align:center; text-transform: uppercase;">{{ project["title"] }}</th>
+
+            <tr>
+                <th>Summary</th>
+                <td>{{ project["summary"] }}</td>
+            </tr>
+
+            <tr>
+                <th>Date of Creation</th>
+                <td>{{ project["date"] }}</td>
+            </tr>
+
+        </table>
+        <br>
+    {% endfor %}
+
+{% endblock %}

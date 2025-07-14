@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  History
+{% endblock %}
+
+{% block main %}
+
+
+    {% for project in completed_projects %}
+        <table class="table table-striped" class="table table-hover" align="center" border="1px solid black">
+            <th colspan="2" style="text-align:center; text-transform: uppercase; color: green;">{{ project["title"] }}</th>
+
+            <tr>
+                <th>Summary</th>
+                <td>{{ project["summary"] }}</td>
+            </tr>
+
+            <tr>
+                <th>Date of Creation</th>
+                <td>{{ project["creation_date"] }}</td>
+            </tr>
+
+            <tr>
+                <th>Date of Completion</td>
+                <td>{{ project["completion_date"] }}</td>
+            </tr>
+
+        </table>
+        <br>
+    {% endfor %}
+
+    {% for project in deleted_projects %}
+        <table class="table table-striped" class="table table-hover" align="center" border="1px solid black">
+            <th colspan="2" style="text-align:center; text-transform: uppercase; color: red;">{{ project["title"] }}</th>
+
+            <tr>
+                <th>Summary</th>
+                <td>{{ project["summary"] }}</td>
+            </tr>
+
+            <tr>
+                <th>Date of Creation</th>
+                <td>{{ project["creation_date"] }}</td>
+            </tr>
+
+            <tr>
+                <th>Date of Deletion</td>
+                <td>{{ project["deletion_date"] }}</td>
+            </tr>
+
+        </table>
+        <br>
+    {% endfor %}
+
+{% endblock %}

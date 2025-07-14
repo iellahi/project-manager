@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Editor
+{% endblock %}
+
+{% block main %}
+
+<form action="editor" method="post">
+
+  <div class="row">
+
+    <div class="col-10">
+        <label>Title</label><br>
+        <textarea name="title" class="title" style="text-align:center; text-transform: uppercase;" required placeholder="Project Title!"></textarea>
+      <div class="form-group">
+        <label>Summary</label><br>
+        <textarea name="summary" required class="summary" placeholder="A brief summary.."></textarea>
+      </div>
+       <div class="form-group">
+        <label>TODO List</label><br>
+        <textarea name="todo_list" style="height:200px;font-size:14pt;" required class="todo" placeholder="A list of tasks"></textarea>
+    <br><br>
+        <button type="submit" name="submit" value="submit" class="btn btn-light">Save</button>
+      <button type="reset" class="btn btn-light">Reset</button>
+      </div>
+
+    </div>
+
+    <div class="col-2">
+      <div class="form-group">
+        <label>Editing permissions</label><br>
+        <textarea name="permission_1" class="permissions" placeholder="username (opt.)"></textarea>
+      </div>
+      <div>
+        <textarea name="permission_2" class="permissions" placeholder="username (opt.)"></textarea>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+
+  <!-- WEBSITE SUMMARY  -->
+  <div class="row">
+    <div class="col">
+      <img src="/static/history.png" alt="Finished projects" class="history">
+    </div>
+
+    <!-- LOG IN -->
+    <div class="col col-lg-3">
+      <form action="/login" method="post">
+        <h1>Log In</h1>
+          <div class="form-group">
+              <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+          </div>
+          <div class="form-group">
+              <input class="form-control" name="password" placeholder="Password" type="password">
+          </div>
+          <button class="btn btn-primary" type="submit">Log In</button>
+      </form>
+    </div>
+
+    <!--REGISTER -->
+    <div class="col col-lg-3">
+      <h1>Register</h1>
+      <form action="/register" method="post">
+          <div class="form-group">
+              <input autocomplete="off" class="form-control" name="username" placeholder="Username" type="text">
+          </div>
+          <div class="form-group">
+              <input class="form-control" name="password" placeholder="Password" type="password">
+          </div>
+          <div class="form-group">
+              <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password">
+          </div>
+          <button class="btn btn-primary" class="vertical-center" type="submit">Register</button>
+    </div>
+  </div>
+</div>
+
+<img src="/static/editor.png" alt="Project Editor" class="editor">
+
+{% endblock %}
